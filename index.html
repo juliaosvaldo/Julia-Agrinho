@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável - Agrinho 2026</title>
+    <style>
+        /* IMPORTANDO FONTES DATILOGRAFADAS GOOGLE FONTS */
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap');
+
+        /* DEFINIÇÃO DE VARIÁVEIS DE CORES DO PROJETO */
+        :root {
+            --verde-escuro: #1b382b;
+            --verde-medio: #2e5339;
+            --verde-claro: #8daa91;
+            --verde-brotinho: #dce5dd;
+            --prata-metalico: #8a9597;
+            --prata-suave: #e2e8e5;
+            --branco-papel: #f7f9f6;
+            --papel-amarelado: #f3f6f1;
+            --preto-fita: #1f2521;
+            --sombra-retro: 3px 3px 0px rgba(27, 56, 43, 0.15);
+        }
+
+        /* CONFIGURAÇÕES GERAIS / EFEITO PAPEL ANTIGO */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Courier Prime', 'Courier New', monospace;
+            background-color: var(--verde-brotinho);
+            background-image: radial-gradient(var(--verde-claro) 0.5px, transparent 0.5px), radial-gradient(var(--verde-claro) 0.5px, var(--verde-brotinho) 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            color: var(--preto-fita);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* TEXTURA DO GABINETE DA MÁQUINA DE ESCREVER */
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--branco-papel);
+            border: 12px double var(--verde-escuro);
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.15), inset 0 0 40px rgba(0,0,0,0.05);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* DETALHE ESTÉTICO DE LINHA METÁLICA (PRATA) */
+        .metal-bar {
+            height: 18px;
+            background: linear-gradient(90deg, #6c757d, #adb5bd, #e9ecef, #adb5bd, #6c757d);
+            border-bottom: 3px solid var(--verde-escuro);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+        }
+
+        .metal-bolt {
+            width: 10px;
+            height: 10px;
+            background: #495057;
+            border-radius: 50%;
+            border: 1px solid #ced4da;
+        }
+
+        /* CABEÇALHO DATILOGRAFADO */
+        header {
+            text-align: center;
+            padding: 40px 30px 20px 30px;
+            border-bottom: 2px dashed var(--verde-claro);
+            background-color: var(--papel-amarelado);
+        }
+
+        .stamp {
+            display: inline-block;
+            border: 3px double var(--verde-escuro);
+            padding: 5px 15px;
+            font-family: 'Special Elite', cursive;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: var(--verde-escuro);
+            transform: rotate(-1.5deg);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 2.2rem;
+            color: var(--verde-escuro);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--verde-medio);
+            max-width: 800px;
+            margin: 0 auto;
+            border-top: 1px solid var(--verde-claro);
+            border-bottom: 1px solid var(--verde-claro);
+            padding: 8px 0;
+            text-transform: uppercase;
+        }
+
+        /* MENU DE NAVEGAÇÃO */
+        nav {
+            background-color: var(--verde-escuro);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 3px solid var(--prata-metalico);
+        }
+
+        nav a {
+            color: var(--branco-papel);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--verde-medio);
+            border-color: var(--prata-suave);
+            color: var(--branco-papel);
+        }
+
+        /* LAYOUT PRINCIPAL */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 35px;
+        }
+
+        /* TEXTO PRINCIPAL: O MANIFESTO DO EQUILÍBRIO */
+        .manifesto {
+            background-color: var(--papel-amarelado);
+            border: 2px solid var(--verde-claro);
+            padding: 30px;
+            position: relative;
+            background-image: linear-gradient(rgba(46, 83, 57, 0.04) 1px, transparent 1px);
+            background-size: 100% 24px;
+        }
+
+        .manifesto::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: rgba(141, 170, 145, 0.4);
+        }
+
+        .typewritten-paragraph {
+            text-indent: 40px;
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1rem;
+        }
+
+        .typewritten-paragraph::first-letter {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--verde-escuro);
+        }
+
+        /* SEÇÃO DE DADOS OFICIAIS (EMBRAPA, IBGE, MAPA) */
+        .grid-data {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .data-card {
+            border: 1px solid var(--prata-metalico);
+            background: var(--branco-papel);
+            padding: 20px;
+            box-shadow: var(--sombra-retro);
+            position: relative;
+        }
+
+        .data-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px dashed var(--verde-claro);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .org-badge {
+            background-color: var(--verde-escuro);
+            color: var(--branco-papel);
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .card-title {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.1rem;
+            color: var(--verde-escuro);
+        }
+
+        .big-stat {
+            font-family: 'Special Elite', cursive;
+            font-size: 2.2rem;
+            color: var(--verde-medio);
+            margin: 10px 0;
+            text-align: center;
+            border: 1px double var(--verde-claro);
+            background: var(--papel-amarelado);
+            padding: 5px;
+        }
+
+        /* O PILAR DO EQUILÍBRIO: COMO PRODUZIR CONSERVANDO */
+        .pilar-section {
+            border-top: 3px double var(--verde-escuro);
+            padding-top: 30px;
+            margin-top: 15px;
+        }
+
+        .section-title {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.6rem;
+            color: var(--verde-escuro);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-left: 8px solid var(--verde-escuro);
+            padding-left: 15px;
+        }
+
+        /* LISTA DATILOGRAFADA COM "X" EM VEZ DE BULLET */
+        .retro-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .retro-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .retro-list li::before {
+            content: "[x]";
+            position: absolute;
+            left: 0;
+            color: var(--verde-escuro);
+            font-weight: bold;
+        }
+
+        .retro-list strong {
+            color: var(--verde-escuro);
+        }
+
+        /* FORMULÁRIO DE COMPROMISSO COLETIVO (INTERAÇÃO) */
+        .interactive-board {
+            background-color: var(--papel-amarelado);
+            border: 2px solid var(--prata-metalico);
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: var(--sombra-retro);
+        }
+
+        .interactive-board h3 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.25rem;
+            color: var(--verde-escuro);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .form-row {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--verde-claro);
+            background-color: var(--branco-papel);
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.95rem;
+            color: var(--preto-fita);
+        }
+
+        input[type="text"]:focus, select:focus, textarea:focus {
+            outline: none;
+            border: 2px solid var(--verde-escuro);
+            background-color: #fff;
+        }
+
+        button.btn-retro {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--verde-escuro);
+            color: var(--branco-papel);
+            border: 2px solid var(--preto-fita);
+            font-family: 'Special Elite', cursive;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 2px 2px 0px var(--preto-fita);
+        }
+
+        button.btn-retro:hover {
+            background-color: var(--verde-medio);
+            transform: translateY(-1px);
+            box-shadow: 3px 3px 0px var(--preto-fita);
+        }
+
+        /* PAINEL DE FEEDBACK / CADASTROS REALIZADOS */
+        .registry-box {
+            margin-top: 20px;
+            background: var(--branco-papel);
+            border: 1px dashed var(--verde-escuro);
+            padding: 15px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .registry-item {
+            border-bottom: 1px solid var(--prata-suave);
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        /* INFOGRÁFICO ASCII (RECURSO EXTRA RETRÔ) */
+        .ascii-art-container {
+            background: var(--verde-escuro);
+            color: var(--verde-claro);
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.65rem;
+            line-height: 1.1;
+            overflow-x: auto;
+            text-align: center;
+            margin: 20px 0;
+            border: 3px solid var(--prata-metalico);
+        }
+
+        /* FOOTER ESTILIZADO */
+        footer {
+            background-color: var(--papel-amarelado);
+            border-top: 2px dashed var(--verde-claro);
+            padding: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .footer-seal {
+            margin-top: 15px;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.9rem;
+            color: var(--prata-metalico);
+        }
+
+        /* DISPOSITIVOS MÓVEIS (Ajustes responsivos) */
+        @media (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+            .wrapper {
+                border-width: 6px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .manifesto {
+                padding: 15px;
+            }
+            .manifesto::before {
+                display: none; /* Remove linha de caderno em telas pequenas */
+            }
+            .typewritten-paragraph {
+                text-indent: 0;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <!-- BARRA METÁLICA DA MÁQUINA DE ESCREVER -->
+        <div class="metal-bar">
+            <div class="metal-bolt"></div>
+            <span style="font-size: 10px; color: #495057; font-family: monospace; font-weight: bold;">REGISTRO AGRINHO N. 2026</span>
+            <div class="metal-bolt"></div>
+        </div>
+
+        <!-- CABEÇALHO DO INFORME -->
+        <header>
+            <div class="stamp">Documento de Conscientização</div>
+            <h1>AGRO FORTE, FUTURO SUSTENTÁVEL</h1>
+            <p class="subtitle">O Equilíbrio Essencial Entre a Produção e o Meio Ambiente</p>
+            <p style="margin-top: 10px; font-style: italic; font-size: 0.9rem; color: var(--verde-medio);">
+                "Unindo o conhecimento científico das terras do Brasil à preservação das futuras gerações"
+            </p>
+        </header>
+
+        <!-- NAVEGAÇÃO RÁPIDA -->
+        <nav>
+            <a href="#equilibrio">O Manifesto</a>
+            <a href="#dados">Dados do Campo</a>
+            <a href="#como-fazer">Como Cuidar</a>
+            <a href="#compromisso">Assinar Manifesto</a>
+        </nav>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="container">
+            
+            <!-- SEÇÃO 1: O EQUILÍBRIO (MANIFETO) -->
+            <section id="equilibrio" class="manifesto">
+                <div class="section-title">O Manifesto do Solo Seguro</div>
+                
+                <p class="typewritten-paragraph">
+                    Durante décadas, o mundo encarou a produção de alimentos e a preservação do meio ambiente como caminhos opostos. Dizia-se que, para alimentar as populações crescentes, a floresta precisaria recuar. No entanto, o Programa Agrinho 2026 propõe que o futuro reside na harmonia mútua: um <strong>Agro Forte</strong> não destrói o ambiente que o sustenta, e a preservação do <strong>Meio Ambiente</strong> depende da eficiência tecnológica gerada no campo.
+                </p>
+
+                <p class="typewritten-paragraph">
+                    A verdadeira força da agropecuária moderna não está na expansão desordenada, mas sim no ganho de produtividade inteligente. Graças à ciência do solo e às tecnologias limpas, hoje é perfeitamente viável produzir mais grãos e carne utilizando menos recursos. Trata-se de enxergar o bioma não como um obstáculo, mas como o principal parceiro de negócios do produtor rural.
+                </p>
+
+                <!-- ARTE ASCII DO CAMPO (RETRÔ) -->
+                <div class="ascii-art-container">
+<pre>
+     _  _  _                       _  _  _     
+    ( `_` `_` )                   ( `_` `_` )  
+    /_______/ \                   /_______/ \  
+    |  ___  | |     _.._.._       |  ___  | |  
+    | |___| | |   /\_/\_/\_/\     | |___| | |  
+  ~~~~~~~~~~~~~~~~\_/\_/\_/\_~~~~~~~~~~~~~~~~~~~
+    CAMPOS CULTIVADOS COM ILPF E INTEGRAÇÃO (EMBRAPA)
+</pre>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 2: DADOS OFICIAIS (MAPA, IBGE, EMBRAPA) -->
+            <section id="dados" class="pilar-section">
+                <div class="section-title">Evidências Científicas & Estatísticas</div>
+                <p style="margin-bottom: 20px; text-align: justify;">
+                    Consultando as maiores instituições científicas e estatísticas governamentais, coletamos dados irrefutáveis que provam a viabilidade de um agronegócio de baixas emissões e alta rentabilidade:
+                </p>
+
+                <div class="grid-data">
+                    
+                    <!-- CARD 1: EMBRAPA -->
+                    <div class="data-card">
+                        <div class="data-card-header">
+                            <span class="org-badge">EMBRAPA</span>
+                            <span class="card-title">Tecnologia ILPF</span>
+                        </div>
+                        <p style="font-size: 0.85rem; height: 75px;">Adoção de sistemas de Integração Lavoura-Pecuária-Floresta recupera pastagens degradadas e fixa carbono no solo.</p>
+                        <div class="big-stat">+17.4M</div>
+                        <p style="font-size: 0.75rem; text-align: center; color: var(--verde-medio);">de hectares integrados no Brasil até hoje</p>
+                    </div>
+
+                    <!-- CARD 2: IBGE -->
+                    <div class="data-card">
+                        <div class="data-card-header">
+                            <span class="org-badge">IBGE</span>
+                            <span class="card-title">Censo e Florestas</span>
+                        </div>
+                        <p style="font-size: 0.85rem; height: 75px;">As propriedades privadas de produtores rurais são responsáveis pela preservação de áreas verdes nativas gigantescas.</p>
+                        <div class="big-stat">30.2%</div>
+                        <p style="font-size: 0.75rem; text-align: center; color: var(--verde-medio);">do território do país preservado em terras privadas</p>
+                    </div>
+
+                    <!-- CARD 3: MAPA -->
+                    <div class="data-card">
+                        <div class="data-card-header">
+                            <span class="org-badge">MAPA</span>
+                            <span class="card-title">Plano ABC+</span>
+                        </div>
+                        <p style="font-size: 0.85rem; height: 75px;">Plano Setorial para Adaptação à Mudança do Clima e Baixa Emissão de Carbono na Agricultura estimula o campo.</p>
+                        <div class="big-stat">-1.04B</div>
+                        <p style="font-size: 0.75rem; text-align: center; color: var(--verde-medio);">de toneladas de CO₂ equivalente a menos até 2030</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SEÇÃO 3: QUAL A MELHOR MANEIRA DE CONSEGUIR ESSE EQUILÍBRIO? -->
+            <section id="como-fazer" class="pilar-section">
+                <div class="section-title">Como Criar o Agro do Futuro?</div>
+                <p style="margin-bottom: 20px; text-align: justify;">
+                    Para conscientizar a população urbana e rural, listamos as práticas concretas promovidas pela pesquisa governamental e adotadas pelos heróis sustentáveis do campo:
+                </p>
+
+                <ul class="retro-list">
+                    <li>
+                        <strong>Integração Lavoura-Pecuária-Floresta (ILPF):</strong> Consiste no plantio de culturas agrícolas, árvores e criação de gado no mesmo espaço físico. A sombra das árvores confere bem-estar ao animal, as árvores geram madeira e o pasto se mantém fértil.
+                    </li>
+                    <li>
+                        <strong>Plantio Direto na Palhada:</strong> O solo não é arado ou revolvido. As sementes são plantadas diretamente sobre os restos orgânicos da colheita anterior. Isso evita a erosão, preserva a água no solo e reduz o consumo de combustível dos tratores.
+                    </li>
+                    <li>
+                        <strong>Controle Biológico de Pragas:</strong> Uso de defensores naturais (como insetos benéficos ou micro-organismos) para controlar pragas e doenças, diminuindo drasticamente a dependência de defensivos químicos sintéticos.
+                    </li>
+                    <li>
+                        <strong>Uso Inteligente de Biofertilizantes:</strong> O reaproveitamento de dejetos animais da pecuária convertidos em adubo orgânico de altíssimo rendimento e produção de biogás, reduzindo desperdícios.
+                    </li>
+                    <li>
+                        <strong>Recuperação de Pastos Degradados:</strong> O Brasil possui milhões de hectares de pastos desgastados que podem se tornar novamente férteis, evitando que novas áreas nativas precisem ser desmatadas para fins de plantio.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SEÇÃO 4: COMPROMISSO INTERATIVO -->
+            <section id="compromisso" class="pilar-section">
+                <div class="interactive-board">
+                    <h3>Assine o Compromisso Coletivo do Campo</h3>
+                    <p style="font-size: 0.85rem; text-align: center; margin-bottom: 20px;">
+                        Ao preencher esta declaração, você ajuda a divulgar o movimento "Agro Forte, Futuro Sustentável" em sua comunidade escolar.
+                    </p>
+
+                    <form id="manifesto-form" onsubmit="registrarCompromisso(event)">
+                        <div class="form-row">
+                            <label for="nome">Nome Completo do Cidadão:</label>
+                            <input type="text" id="nome" placeholder="Ex: Maria Oliveira Silva" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="perfil">Seu Perfil de Atuação:</label>
+                            <select id="perfil" required>
+                                <option value="">-- Selecione --</option>
+                                <option value="Estudante">Estudante (Agrinho 2026)</option>
+                                <option value="Educador">Educador / Professor</option>
+                                <option value="Produtor">Produtor Rural / Técnico</option>
+                                <option value="Urbano">Cidadão da Zona Urbana</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="mensagem">Sua ideia de como equilibrar produção e meio ambiente:</label>
+                            <textarea id="mensagem" rows="3" placeholder="Ex: 'Usar irrigação inteligente para evitar desperdício de água.'" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-retro">REGISTRAR ASSINATURA NA ATA</button>
+                    </form>
+
+                    <!-- CAIXA DE RETORNO DATILOGRAFADO -->
+                    <div style="margin-top: 20px;">
+                        <label>Atas Registradas nesta Máquina:</label>
+                        <div class="registry-box" id="registryBox">
+                            <div class="registry-item">
+                                <strong>[01] MAPA & EMBRAPA:</strong> "Assinado em favor do Plano ABC+ e das tecnologias de manejo biológico nas escolas."
+                            </div>
+                            <div class="registry-item">
+                                <strong>[02] Coordenação Agrinho:</strong> "Sustentabilidade começa na educação de nossas crianças e jovens do campo."
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- RODAPÉ RETRÔ -->
+        <footer>
+            <p><strong>SITE OFICIAL DE CONSCIENTIZAÇÃO - TEMA AGRINHO 2026</strong></p>
+            <p style="margin-top: 5px; font-size: 0.8rem; color: var(--verde-medio);">
+                Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente.
+            </p>
+            <p style="margin-top: 10px; font-size: 0.75rem; color: var(--prata-metalico);">
+                Fontes consultadas para o projeto pedagógico: Empresa Brasileira de Pesquisa Agropecuária (Embrapa), Ministério da Agricultura e Pecuária (MAPA) e Instituto Brasileiro de Geografia e Estatística (IBGE).
+            </p>
+            <div class="footer-seal">
+                * RELATÓRIO DATILOGRAFADO COMPACTO *
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- LOGICA DE REGISTRO EM MEMÓRIA (Apenas para enriquecer a experiência do usuário) -->
+    <script>
+        let contadorAtas = 3;
+
+        function registrarCompromisso(event) {
+            event.preventDefault();
+
+            // Obtenção de dados do formulário
+            const nome = document.getElementById('nome').value.trim();
+            const perfil = document.getElementById('perfil').value;
+            const mensagem = document.getElementById('mensagem').value.trim();
+
+            if (!nome || !perfil || !mensagem) {
+                return;
+            }
+
+            // Criação de elemento de registro retrô
+            const registryBox = document.getElementById('registryBox');
+            const item = document.createElement('div');
+            item.className = 'registry-item';
+            
+            const numRegistro = contadorAtas < 10 ? '0' + contadorAtas : contadorAtas;
+            
+            item.innerHTML = `<strong>[${numRegistro}] ${nome} (${perfil}):</strong> "${mensagem}"`;
+            
+            // Inserir no topo para ficar visível
+            registryBox.insertBefore(item, registryBox.firstChild);
+            
+            // Incrementar contador
+            contadorAtas++;
+
+            // Limpar formulário
+            document.getElementById('manifesto-form').reset();
+
+            // Rolar suavemente para ver o novo registro
+            registryBox.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
